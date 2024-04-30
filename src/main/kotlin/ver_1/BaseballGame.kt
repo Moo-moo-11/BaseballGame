@@ -1,4 +1,4 @@
-package org.example
+package ver_1
 
 class BaseballGame {
     private var gamePlayCount = 0
@@ -61,17 +61,16 @@ class BaseballGame {
 
             val inputString = readln()
 
-            when {
-                Regex("[1-9][1-9][1-9]") matches inputString -> {
-                    if (inputString[0] == inputString[1] || inputString[0] == inputString[2]
-                        || inputString[1] == inputString[2]
-                    ) {
-                        println("0을 제외한 서로 다른 3개의 숫자를 입력해야합니다. 다시 입력해주세요.")
-                    } else {
-                        return inputString.map { it.digitToInt() }.toIntArray()
-                    }
+            if (Regex("[1-9][1-9][1-9]") matches inputString) {
+                if (inputString[0] == inputString[1] || inputString[0] == inputString[2]
+                    || inputString[1] == inputString[2]
+                ) {
+                    println("0을 제외한 서로 다른 3개의 숫자를 입력해야합니다. 다시 입력해주세요.")
+                } else {
+                    return inputString.map { it.digitToInt() }.toIntArray()
                 }
-                else -> println("3개의 숫자만 입력 가능합니다. 다시 입력해주세요")
+            } else {
+                println("3개의 숫자만 입력 가능합니다. 다시 입력해주세요")
             }
 
         }

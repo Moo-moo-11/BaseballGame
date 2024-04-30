@@ -1,4 +1,4 @@
-package org.example
+package ver_1
 
 fun main() {
 
@@ -25,20 +25,20 @@ fun main() {
 
 fun getInitialInput():Int {
 
-    val input: Int
-
     while (true) {
-        val tempInput = readln().toIntOrNull()
 
-        if (tempInput == null) {
-            println("잘못 입력하셨습니다. 다시 입력해주세요")
-        } else if (tempInput !in (1..3)) {
-            println("1,2,3만 입력 가능합니다. 다시 입력해주세요")
-        } else {
-            input = tempInput
-            break
+        when (val input = readln().toIntOrNull()) {
+
+            null -> {
+                println("숫자만 입력 가능합니다. 다시 입력해주세요")
+            }
+            !in (1..3) -> {
+                println("1,2,3만 입력 가능합니다. 다시 입력해주세요")
+            }
+            else -> {
+                return input
+            }
         }
     }
 
-    return input
 }
