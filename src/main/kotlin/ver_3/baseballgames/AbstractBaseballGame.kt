@@ -23,7 +23,7 @@ abstract class AbstractBaseballGame {
         }
 
     } else {
-        println("아직 플레이 기록이 없습니다")
+        println("아직 플레이 기록이 없습니다 \uD83D\uDE45\uD83C\uDFFD")
     }
 
     protected fun computeStrikeBall(answer:CharArray, input:CharArray):Pair<Int,Int> {

@@ -16,14 +16,14 @@ fun main() {
     while(true) {
 
         println("⚾⚾⚾⚾⚾ 메뉴를 선택해주세요 ⚾⚾⚾⚾⚾")
-        println("1. 게임 시작하기, 2. Easy 모드 시작하기, 3. Hard 모드 시작하기, 4. 명예의 전당, 5. 게임 종료하기")
+        println("1.일반 게임 시작하기, 2. Easy 모드 시작하기, 3. Hard 모드 시작하기, 4. 명예의 전당, 5. 게임 종료하기")
 
-        val initialInput = getNumberInputOneToi(5)
-
-        when (initialInput) {
-            1 -> playGame.startGame(baseballGame)
-            2 -> playGame.startGame(baseballGameEasy)
-            3 -> playGame.startGame(baseballGameHard)
+        when (val initialInput = getNumberInputOneToi(5)) {
+            1, 2, 3 -> when (initialInput) {
+                1 -> baseballGame
+                2 -> baseballGameEasy
+                else -> baseballGameHard
+            }.let {playGame.startGame(it)}
             4 -> {
                 while(true) {
                     println("⚾⚾⚾⚾⚾ 기록을 볼 모드를 선택해주세요 ⚾⚾⚾⚾⚾")
