@@ -23,7 +23,7 @@ fun main() {
                 1 -> baseballGame
                 2 -> baseballGameEasy
                 else -> baseballGameHard
-            }.let {playGame.startGame(it)}
+            }.run {playGame.startGame(this)}
             4 -> {
                 while(true) {
                     println("⚾⚾⚾⚾⚾ 기록을 볼 모드를 선택해주세요 ⚾⚾⚾⚾⚾")
@@ -33,7 +33,7 @@ fun main() {
                         2 -> baseballGameEasy
                         3 -> baseballGameHard
                         else -> break
-                    }.let { playGame.printHighScore(it) }
+                    }.run { playGame.printHighScore(this) }
                 }
             }
             5 -> {println("⚾⚾⚾ 게임을 종료합니다. ⚾⚾⚾"); break}

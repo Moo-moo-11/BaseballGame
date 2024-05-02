@@ -46,7 +46,7 @@ class BaseballGameEasy: AbstractBaseballGame() {
                 ) {
                     println("같은 숫자를 두 번 입력할 수 없습니다. 다시 입력해주세요.")
                 } else {
-                    return inputString.map { it }.toCharArray()
+                    return inputString.toCharArray()
                 }
             } else {
                 println("1~7 사이 3개의 숫자만 입력 가능합니다. 다시 입력해주세요")

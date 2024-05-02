@@ -8,7 +8,6 @@ class BaseballGameHard: AbstractBaseballGame() {
 
         val answerAlphabetArray = getRandomThreeAlphabetArray()
 
-
         println("\uD83D\uDE08\uD83D\uDE08\uD83D\uDE08\uD83D\uDE08\uD83D\uDE08 하드모드에 오신 것을 환영합니다 \uD83D\uDE08\uD83D\uDE08\uD83D\uDE08\uD83D\uDE08\uD83D\uDE08")
         println("[주의] 하드 모드는 숫자가 아니라 26개의 소문자 알파벳을 이용합니다! \uD83D\uDD21")
         println("[안내] 투수가 공을 던지면 a~z 까지의 임의의 소문자 알파벳 3개를 순서대로 입력해주세요")
@@ -49,10 +48,10 @@ class BaseballGameHard: AbstractBaseballGame() {
                 ) {
                     println("같은 알파벳은 두 번 입력할 수 없습니다. 다시 입력해주세요.")
                 } else {
-                    return inputString.map { it }.toCharArray()
+                    return inputString.toCharArray()
                 }
             } else {
-                println("3개의 알파벳만 입력 가능합니다. 다시 입력해주세요")
+                println("3개의 소문자 알파벳만 입력 가능합니다. 다시 입력해주세요")
             }
 
         }
