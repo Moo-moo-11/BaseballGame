@@ -18,7 +18,7 @@ class BaseballGame: AbstractBaseballGame() {
 
             println("투수가 공을 던집니다. \uD83D\uDD90\uFE0F⚾")
 
-            val inputArray = getThreeNumbInputArray()
+            val inputArray = getThreeNumbInputString()
 
             val (strike, ball) = computeStrikeBall(answerNumbArray, inputArray)
 
@@ -33,7 +33,7 @@ class BaseballGame: AbstractBaseballGame() {
 
     }
 
-    private fun getThreeNumbInputArray():String {
+    private fun getThreeNumbInputString():String {
 
         while (true) {
 
