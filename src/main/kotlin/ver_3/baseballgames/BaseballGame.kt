@@ -33,7 +33,7 @@ class BaseballGame: AbstractBaseballGame() {
 
     }
 
-    private fun getThreeNumbInputArray():CharArray {
+    private fun getThreeNumbInputArray():String {
 
         while (true) {
 
@@ -45,7 +45,7 @@ class BaseballGame: AbstractBaseballGame() {
                 ) {
                     println("같은 숫자는 두번 입력할 수 없습니다. 다시 입력해주세요.")
                 } else {
-                    return inputString.toCharArray()
+                    return inputString
                 }
             } else {
                 println("0을 제외한 3개의 숫자만 입력 가능합니다. 다시 입력해주세요")

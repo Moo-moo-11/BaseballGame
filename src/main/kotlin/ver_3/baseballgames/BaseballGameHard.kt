@@ -36,7 +36,7 @@ class BaseballGameHard: AbstractBaseballGame() {
 
     }
 
-    private fun getThreeAlphabetInputArray():CharArray {
+    private fun getThreeAlphabetInputArray():String {
 
         while (true) {
 
@@ -48,7 +48,7 @@ class BaseballGameHard: AbstractBaseballGame() {
                 ) {
                     println("같은 알파벳은 두 번 입력할 수 없습니다. 다시 입력해주세요.")
                 } else {
-                    return inputString.toCharArray()
+                    return inputString
                 }
             } else {
                 println("3개의 소문자 알파벳만 입력 가능합니다. 다시 입력해주세요")

@@ -26,7 +26,7 @@ abstract class AbstractBaseballGame {
         println("아직 플레이 기록이 없습니다 \uD83D\uDE45\uD83C\uDFFD")
     }
 
-    protected fun computeStrikeBall(answer:CharArray, input:CharArray):Pair<Int,Int> {
+    protected fun computeStrikeBall(answer:CharArray, input:String):Pair<Int,Int> {
 
         var strike = 0
         var ball = 0
