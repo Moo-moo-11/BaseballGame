@@ -9,6 +9,6 @@ class PlayGame {
     }
 
     fun printHighScore(game: AbstractBaseballGame) {
-        game.printHighScore(game.gameType)
+        game.printHighScore()
     }
 }

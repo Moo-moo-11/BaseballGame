@@ -7,7 +7,7 @@ abstract class AbstractBaseballGame {
 
     abstract fun playGame()
 
-    fun printHighScore(gameType:String) = if (gamePlayResultList.isNotEmpty()) {
+    fun printHighScore() = if (gamePlayResultList.isNotEmpty()) {
 
         gamePlayResultList.sortWith(compareBy({ it.second }, { it.first }))
 

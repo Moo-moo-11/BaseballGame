@@ -28,8 +28,7 @@ fun main() {
                 while(true) {
                     println("⚾⚾⚾⚾⚾ 기록을 볼 모드를 선택해주세요 ⚾⚾⚾⚾⚾")
                     println("1. 일반 게임, 2. Easy 모드, 3. Hard 모드, 4. 이전 메뉴")
-                    val gameSelectInput = getNumberInputOneToi(4)
-                    when (gameSelectInput) {
+                    when (getNumberInputOneToi(4)) {
                         1 -> baseballGame
                         2 -> baseballGameEasy
                         3 -> baseballGameHard
