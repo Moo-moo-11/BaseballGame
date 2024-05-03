@@ -18,9 +18,9 @@ class BaseballGame: AbstractBaseballGame() {
 
             println("투수가 공을 던집니다. \uD83D\uDD90\uFE0F⚾")
 
-            val inputArray = getThreeNumbInputString()
+            val inputString = getThreeNumbInputString()
 
-            val (strike, ball) = computeStrikeBall(answerNumbArray, inputArray)
+            val (strike, ball) = computeStrikeBall(answerNumbArray, inputString)
 
             printStrikeBallResult(strike, ball)
 
@@ -55,7 +55,7 @@ class BaseballGame: AbstractBaseballGame() {
 
     }
 
-    private fun getRandomThreeNumbArray(): CharArray {
+    private fun getRandomThreeNumbArray():CharArray {
         val numberArray = charArrayOf('1','2','3','4','5','6','7','8','9')
 
         numberArray.shuffle()

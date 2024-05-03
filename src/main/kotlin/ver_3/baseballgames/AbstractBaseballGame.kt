@@ -65,7 +65,7 @@ abstract class AbstractBaseballGame {
             if (name.length <= 10) {
                 return name
             } else {
-                println("이름은 10자 이내로 입력가능합니다.")
+                println("이름은 10자 이내로 입력가능합니다. 다시 입력해주세요")
             }
         }
 
